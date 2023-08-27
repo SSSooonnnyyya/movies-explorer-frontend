@@ -1,0 +1,66 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.error__code {
+    font-size: 140px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 5px 0;
+}
+
+@media screen and (max-width: 320px) {
+    .error__code {
+        font-size: 80px;
+    }
+}
+
+.error__message {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+@media screen and (max-width: 320px) {
+    .error__message {
+        font-size: 12px;
+    }
+}
+
+.error__button {
+    color: rgba(0, 0, 0, 1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    position: absolute;
+    bottom: 60px;
+}
+
+
+@media screen and (max-width: 320px) {
+    .error__button {
+        bottom: 30px;
+        font-size: 12px;
+    }
+}
+
+
+.error__button:hover {
+    transition: opacity .3s ease;
+    opacity: .6;
+    cursor: pointer;
+}

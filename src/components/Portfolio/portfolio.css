@@ -1,0 +1,105 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 70px 204px 70px;
+    width: calc(100% - 140px);
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio {
+        margin: 0 50px 169px 50px;
+        width: calc(100% - 100px);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .portfolio {
+        margin: 0 14px 149px 14px;
+        width: calc(100% - 28px);
+    }
+}
+
+.portfolio__link {
+    background-image: url(../../images/link_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 29px;
+    height: 60px;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.portfolio__link:hover {
+    transition: opacity .3s ease;
+    opacity: .6;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio__link {
+        width: 27px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .portfolio__link {
+        width: 18px;
+        height: 28px;
+    }
+}
+
+.portfolio__point {
+    font-size: 30px;
+    line-height: 1.67;
+    font-weight: 400;
+    margin: 20px 0 0 0;
+    letter-spacing: -1.2px;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio__point {
+        font-size: 28px;
+        letter-spacing: -1.12px;
+        line-height: 1.78;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .portfolio__point {
+        font-size: 18px;
+        letter-spacing: -0.72px;
+    }
+}
+
+.portfolio__element {
+    border-bottom: 1px solid  #E8E8E8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 19px;
+}
+
+.portfolio__element:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.portfolio__title {
+    color: #A0A0A0;
+    font-size: 18px;
+    line-height: 1.11;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+}
+
+@media screen and (max-width: 320px) {
+    .portfolio__title {
+        font-size: 14px;
+        margin: 0 0 20px 0;
+    }
+}
