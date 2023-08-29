@@ -104,6 +104,12 @@
     visibility: hidden;
 }
 
+.movie__delete-button:hover {
+    transition: opacity .3s ease;
+    opacity: .6;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 320px) {
     .movie__delete-button {
         visibility: visible;

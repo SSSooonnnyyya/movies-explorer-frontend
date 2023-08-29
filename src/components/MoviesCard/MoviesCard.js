@@ -27,7 +27,11 @@ function MoviesCard(props) {
         {movieIsSaved ? (
           <div className="movie__save-icon"></div>
         ) : (
-          <button onClick={onMovieClick} className="movie__save-button">
+          <button
+            type="button"
+            onClick={onMovieClick}
+            className="movie__save-button"
+          >
             Сохранить
           </button>
         )}
@@ -43,6 +47,7 @@ function MoviesCard(props) {
         </div>
         {movieIsSaved && (
           <button
+            type="button"
             onClick={onMovieDelete}
             className="movie__delete-button"
           ></button>

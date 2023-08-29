@@ -10,7 +10,7 @@
     align-items: flex-start;
     max-width: 600px;
     white-space: break-spaces;
-    margin: 0 calc(100vw - 1010px) 0 0;
+    margin: 0 calc(100% - 1010px) 0 0;
 }
 
 @media screen and (max-width: 1024px) {
@@ -45,8 +45,9 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
     border-top: 1px solid rgba(0, 0, 0, 1);
-    min-width: calc(100vw - 140px);
+    min-width: calc(100% - 140px);
     margin-bottom: 100px;
     margin: 0 70px 100px 70px;
     padding-top: 66px;
@@ -54,7 +55,7 @@
 
 @media screen and (max-width: 768px) {
     .student__info {
-        min-width: calc(100vw - 100px);
+        min-width: calc(100% - 100px);
         margin: 0 50px 90px 50px;
     }
 }
@@ -69,7 +70,7 @@
 
 @media screen and (max-width: 320px) {
     .student__info {
-        min-width: calc(100vw - 28px);
+        min-width: calc(100% - 28px);
         margin: 0 14px 70px 14px;
         display: grid;
         grid-template-columns: auto;

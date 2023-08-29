@@ -7,7 +7,6 @@ function SavedMovies(props) {
   return (
     <section className="saved-movies">
       <SearchForm />
-      <div className="saved-movies__line"></div>
       <MoviesCardList />
       <div className="saved-movies__space"></div>
     </section>

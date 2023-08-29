@@ -2,16 +2,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .error__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top:  50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    margin: 246px 0 184px 0;
+}
+
+@media screen and (max-width: 748px) {
+    .error__container {
+        margin: 408px 0 184px 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .error__container {
+        margin: 329px 0 284px 0;
+    }
 }
 
 .error__code {
@@ -46,18 +56,13 @@
     font-weight: 400;
     line-height: normal;
     text-decoration: none;
-    position: absolute;
-    bottom: 60px;
 }
-
 
 @media screen and (max-width: 320px) {
     .error__button {
-        bottom: 30px;
         font-size: 12px;
     }
 }
-
 
 .error__button:hover {
     transition: opacity .3s ease;

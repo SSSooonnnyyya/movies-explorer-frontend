@@ -15,9 +15,10 @@ function SearchForm(props) {
   }
 
   return (
-    <div className="search-form">
+    <section className="search-form">
+      <form className="search-form__body">
       <div className="search-form__container">
-        <input className="search-form__input" placeholder="Фильм" />
+        <input className="search-form__input" placeholder="Фильм" required/>
         <button
           type="submit"
           className="search-form__button"
@@ -27,7 +28,6 @@ function SearchForm(props) {
         </button>
       </div>
       <div className="search-form__filter">
-        <div className="search-form__line"></div>
         <div
           onClick={onSwitchClick}
           className={`search-form__switch-btn ${
@@ -36,7 +36,8 @@ function SearchForm(props) {
         ></div>
         <p className="search-form__sign">Короткометражки</p>
       </div>
-    </div>
+      </form>
+    </section>
   );
 }
 

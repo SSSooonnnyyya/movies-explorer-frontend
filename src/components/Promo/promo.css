@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    min-width: 100vw;
     width: 100%;
     min-height: 524px;
     background-color: rgba(243, 193, 248, 1);
@@ -27,7 +26,7 @@
 }
 
 .promo__background {
-    background-image: url(../../images/landing-logo.png);
+    background-image: url(../../images/landing-icon.svg);
     min-width: 320px;
     min-height: 320px;
     position: absolute;
@@ -57,7 +56,7 @@
     text-align: center;
     position: absolute;
     top: calc((524px - 152px)/2);
-    left: calc((100vw - 730px)/2);
+    left: calc((100% - 730px)/2);
     max-width: 730px;
     letter-spacing: -2px;
 }
@@ -66,21 +65,21 @@
 @media screen and (max-width: 1024px) {
     .promo__title {
         top: calc((524px - 152px)/2);
-        left: calc((100vw - 730px)/2);
+        left: calc((100% - 730px)/2);
     }
 }
 
 @media screen and (max-width: 768px) {
     .promo__title {
-        top: calc((784px - 116px)/2);
-        left: calc((100vw - 730px)/2);
+        top: calc((784px - 125px)/2);
+        left: calc((100% - 730px)/2);
     }
 }
 
 @media screen and (max-width: 730px) {
     .promo__title {
         max-width: 500px;
-        left: calc((100vw - 500px)/2);
+        left: calc((100% - 500px)/2);
         top: calc((784px - 224px)/2);
     }
 }
@@ -88,9 +87,9 @@
 @media screen and (max-width: 450px) {
     .promo__title {
         max-width: 300px;
-        left: calc((100vw - 300px)/2);
+        left: calc((100% - 300px)/2);
         top: calc((784px - 268px)/2);
-        font-size: 40px;
+        font-size: 35px;
     }
 }
 
@@ -98,7 +97,7 @@
     .promo__title {
         max-width: 300px;
         top: calc((570px - 150px)/2);
-        left: calc((100vw - 300px)/2);
+        left: calc((100% - 300px)/2);
         font-size: 31px;
         letter-spacing: -1.24px;
         line-height: 1.25;

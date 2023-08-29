@@ -12,7 +12,7 @@ function Techs(props) {
           дипломном проекте.
         </p>
       </div>
-      <div className="tech__technologies">
+      <ul className="tech__technologies">
         <div className="tech__block">HTML</div>
         <div className="tech__block">CSS</div>
         <div className="tech__block">JS</div>
@@ -20,7 +20,7 @@ function Techs(props) {
         <div className="tech__block">Git</div>
         <div className="tech__block">Express.js</div>
         <div className="tech__block">mongo.DB</div>
-      </div>
+      </ul>
     </section>
   );
 }

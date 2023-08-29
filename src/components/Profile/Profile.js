@@ -20,31 +20,35 @@ function Profile(props) {
         <p className="profile__text">Имя</p>
         <input
           disabled={inputIsActive}
+          minLength="2"
+          maxLength="40"
           className="profile__input"
-          placeholder={`${props.userName}`}
+          placeholder={`${props.userName}`
+        }
         ></input>
       </div>
       <div className="profile__element">
         <p className="profile__text">E-mail</p>
         <input
+          type="email"
           disabled={inputIsActive}
           className="profile__input"
           placeholder={`${props.userEmail}`}
         ></input>
       </div>
       {editIsActive && (
-        <button onClick={onEditClick} className="profile__edit-button">
+        <button type="button" onClick={onEditClick} className="profile__edit-button">
           Редактировать
         </button>
       )}
       {editIsActive && (
-        <Link to="/sign-in" className="profile__link">
+        <Link to="/signin" className="profile__link">
           Выйти из аккаунта
         </Link>
       )}
       {buttonIsActive && <span className="profile__input-error">ssssss</span>}
       {buttonIsActive && (
-        <button onClick={onEditClick} className="profile__save-button">
+        <button type="submit" onClick={onEditClick} className="profile__save-button">
           Сохранить
         </button>
       )}

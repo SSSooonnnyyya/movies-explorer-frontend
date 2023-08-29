@@ -100,6 +100,12 @@
     padding: 0;
 }
 
+.profile__link:hover {
+    transition: opacity .3s ease;
+    opacity: .6;
+    cursor: pointer;
+}
+
 .profile__edit-button {
     text-align: center;
     border: none;
@@ -112,6 +118,12 @@
     padding: 0;
 }
 
+.profile__edit-button:hover {
+    transition: opacity .3s ease;
+    opacity: .6;
+    cursor: pointer;
+}
+
 .profile__input {
     border: none;
     text-align: right;
@@ -120,10 +132,20 @@
     line-height: normal;
     color: rgba(0, 0, 0, 1);
     background: none;
+    border-radius: 10px;
+    text-indent: 15px;
 }
 
 .profile__input::placeholder {
     color: rgba(0, 0, 0, 1);
+}
+
+.profile__input:invalid {
+    color: rgba(255, 64, 98, 1);
+}
+
+.profile__input:focus {
+    outline: 1px solid rgb(81, 202, 206);
 }
 
 .profile__save-button {
@@ -135,6 +157,12 @@
     font-size: 14px;
     font-weight: 500px;
     line-height: normal;
+}
+
+.profile__save-button:hover {
+    transition: opacity .3s ease;
+    opacity: .6;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 550px) {

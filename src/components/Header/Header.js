@@ -15,19 +15,19 @@ function Header(props) {
     return (
       <header className="header">
         <Link to="/" className="header__logo"></Link>
-        <div className="header__info">
-          <Link to="/sign-up" className="header__link">
+        <nav className="header__info">
+          <Link to="/signup" className="header__link">
             Регистрация
           </Link>
-          <Link to="/sign-in" className="header__button">
+          <Link to="/signin" className="header__button">
             Войти
           </Link>
-        </div>
+        </nav>
       </header>
     );
   } else if (
-    location.pathname === "/sign-in" ||
-    location.pathname === "/sign-up"
+    location.pathname === "/signin" ||
+    location.pathname === "/signup"
   ) {
     return;
   } else if (
@@ -38,7 +38,7 @@ function Header(props) {
     return (
       <header className="header header_type_profile">
         <Link to="/" className="header__logo"></Link>
-        <div className="header__links">
+        <nav className="header__links">
           <Link to="/movies" className="header__profile-link">
             Фильмы
           </Link>
@@ -49,7 +49,7 @@ function Header(props) {
             Аккаунт
           </Link>
           <Link to="/profile" className="header__profile-logo"></Link>
-        </div>
+        </nav>
         <div className="header__menu" onClick={onMenuClick}></div>
         {menuIsOpened && (
           <Menu isOpened={menuIsOpened} setMenuIsOpened={setMenuIsOpened} />

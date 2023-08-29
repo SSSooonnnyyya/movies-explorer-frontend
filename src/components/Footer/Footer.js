@@ -16,10 +16,10 @@ function Footer(props) {
         </h2>
         <div className="footer__general">
           <p className="footer__year">&copy;2020</p>
-          <div className="footer__source">
-            <p className="footer__element">Яндекс.Практикум</p>
-            <p className="footer__element">Github</p>
-          </div>
+          <ul className="footer__source">
+            <a className="footer__element" href="https://practicum.yandex.ru" target="_blank">Яндекс.Практикум</a>
+            <a className="footer__element" href="https://github.com" target="_blank">Github</a>
+          </ul>
         </div>
       </footer>
     );

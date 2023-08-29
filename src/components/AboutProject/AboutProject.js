@@ -26,10 +26,10 @@ function AboutProject(props) {
         </div>
       </div>
       <div className="project__schema">
-        <div className="project__block1">1 неделя</div>
-        <div className="project__block2">4 недели</div>
-        <div className="project__text">Back-end</div>
-        <div className="project__text">Front-end</div>
+        <p className="project__block1">1 неделя</p>
+        <p className="project__block2">4 недели</p>
+        <p className="project__text">Back-end</p>
+        <p className="project__text">Front-end</p>
       </div>
     </section>
   );

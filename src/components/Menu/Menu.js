@@ -43,7 +43,7 @@ function Menu(props) {
             <div className="menu__profile">
               <Link
                 to="/profile"
-                className={`menu__link_type_profile ${
+                className={`menu__profile-link ${
                   location.pathname === "/profile"
                     ? "menu__link_type_underlined"
                     : ""

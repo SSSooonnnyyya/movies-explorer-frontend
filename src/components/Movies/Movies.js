@@ -10,12 +10,11 @@ function Movies(props) {
   return (
     <section className="movies">
       <SearchForm setIsLoading={setIsLoading}/>
-      <div className="movies__line"></div>
       {isLoading ? 
       <Preloader /> : 
       <MoviesCardList />
       }
-      <button className="movies__button">Ещё</button>
+      <button type="button" className="movies__button">Ещё</button>
     </section>
   );
 }

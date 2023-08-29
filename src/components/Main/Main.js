@@ -9,14 +9,14 @@ import Portfolio from "../Portfolio/Portfolio";
 
 function Main(props) {
   return (
-    <main className="main">
+    <div className="main">
       <Promo />
       <NavTab />
       <AboutProject />
       <Techs />
       <AboutMe />
       <Portfolio />
-    </main>
+    </div>
   );
 }
 

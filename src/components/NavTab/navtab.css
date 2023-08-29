@@ -6,6 +6,8 @@
     min-height: 66px;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 .navtab__element {

@@ -95,7 +95,12 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.21;
-    padding-top: calc((36px - 14px) / 2);
+    height: 27px;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+    margin: 0;
+    padding: 9px 0 0 0;
 }
 
 @media screen and (max-width: 320px) {
@@ -109,7 +114,12 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.21;
-    padding-top: calc((36px - 14px) / 2);
+    height: 27px;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+    margin: 0;
+    padding: 9px 0 0 0;
 }
 
 @media screen and (max-width: 320px) {
@@ -123,15 +133,15 @@
     font-size: 14px;
     line-height: 1.21;
     color: rgba(160, 160, 160, 1);
-    padding-top: calc((36px - 14px) / 2);
+    margin: 14px 0 0 0;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 450px) {
     .project__text {
         font-size: 11px;
         line-height: 1.45;
         font-weight: 400;
-        padding-top: 10px
+        margin: 10px 0 0 0;
     }
 }
 
@@ -151,7 +161,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 450px) {
     .project__schema {
         margin-bottom: 70px;
         grid-template-columns: 35% 65%;

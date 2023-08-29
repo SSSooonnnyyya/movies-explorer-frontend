@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="page">
       <Header />
+      <main>
       <Routes>
         <Route path="/" element={<Main />} />
 
@@ -22,15 +23,16 @@ function App() {
 
         <Route path="/saved-movies" element={<SavedMovies />} />
 
-        <Route path="/sign-in" element={<Login />} />
+        <Route path="/signin" element={<Login />} />
 
-        <Route path="/sign-up" element={<Register />} />
+        <Route path="/signup" element={<Register />} />
 
         <Route path="/profile" element={<Profile />} />
 
-        <Route path="/error" element={<Error code="404" message="Страница не найдена"/>} />
+        <Route path="/*" element={<Error code="404" message="Страница не найдена"/>} />
 
       </Routes>
+      </main>
       <Footer />
     </div>
   );

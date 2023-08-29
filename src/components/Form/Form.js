@@ -9,9 +9,9 @@ function Form(props) {
   }
 
   return (
-    <div className="form">
+    <section className="form">
       <Link to="/" className="form__logo"></Link>
-      <h2 className="form__greeting">{props.title}</h2>
+      <h1 className="form__greeting">{props.title}</h1>
       <form onSubmit={handleFormSubmit} className="form__body">
         {props.children}
 
@@ -29,7 +29,7 @@ function Form(props) {
           </Link>
         </div>
       </form>
-    </div>
+    </section>
   );
 }
 

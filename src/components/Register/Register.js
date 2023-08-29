@@ -2,8 +2,7 @@ import React from "react";
 import Form from "../Form/Form";
 
 function Register(props) {
-  function handleSubmit(e) {
-  }
+  function handleSubmit(e) {}
 
   return (
     <Form
@@ -12,7 +11,7 @@ function Register(props) {
       onSubmit={handleSubmit}
       buttonName="Зарегистрироваться"
       question="Уже зарегистрированы?"
-      questionLink="/sign-in"
+      questionLink="/signin"
       linkText="Войти"
     >
       <label className="form__label">Имя</label>
@@ -23,6 +22,7 @@ function Register(props) {
         required
         minLength="2"
         maxLength="40"
+        placeholder="Имя"
       />
       <label className="form__label">E-mail</label>
       <input
@@ -31,10 +31,19 @@ function Register(props) {
         id="email"
         name="email"
         type="email"
+        placeholder="E-mail"
       />
 
       <label className="form__label">Пароль</label>
-      <input required className="form__input" id="password" name="password" />
+      <input
+        required
+        className="form__input"
+        id="password"
+        name="password"
+        minLength="5"
+        maxLength="20"
+        placeholder="Пароль"
+      />
       <span className="form__input-error">Что-то пошло не так...</span>
     </Form>
   );

@@ -126,6 +126,7 @@
     flex-direction: row;
     align-self: center;
     margin: 0 0 100px 0;
+    padding: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -176,7 +177,7 @@
 
 @media screen and (max-width: 320px) {
     .tech__title {
-        margin: 55px 18px 28px 18px;
+        margin: 58px 18px 28px 18px;
         font-size: 18px;
         line-height: normal;
         letter-spacing: -0.72px;
