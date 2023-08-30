@@ -52,6 +52,12 @@
     }
 }
 
+@media screen and (max-width: 700px) {
+    .tech__number {
+        font-size: 40px;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .tech__number {
         font-size: 30px;
@@ -107,6 +113,12 @@
         font-size: 12px;
         letter-spacing: -0.48px;
 
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tech__block {
+        margin: 0;
     }
 }
 

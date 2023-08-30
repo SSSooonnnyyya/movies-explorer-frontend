@@ -25,7 +25,7 @@
     }
   }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 360px) {
     .movie__mask {
         width: 300px;
         height: 168px;
@@ -49,7 +49,7 @@
 }
 
 @media screen and (max-width: 320px) {
-    .movie__mask {
+    .movie__title {
         font-size: 12px;
     }
 }
@@ -91,6 +91,12 @@
     position: absolute;
     right: 14px;
     top: 14px;
+}
+
+.movie__save-icon:hover {
+    transition: opacity .3s ease;
+    opacity: .6;
+    cursor: pointer;
 }
 
 .movie__delete-button {

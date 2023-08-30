@@ -60,6 +60,12 @@
     }
 }
 
+@media screen and (max-width: 360px) {
+    .student__info {
+        margin: 0 30px 90px 30px;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .student__info {
         display: grid;

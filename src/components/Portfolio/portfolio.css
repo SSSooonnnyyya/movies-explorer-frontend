@@ -42,6 +42,11 @@
         height: 12px;
     }
 }
+.portfolio__links {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
 
 .portfolio__link {
     border-bottom: 1px solid  #E8E8E8;
@@ -79,7 +84,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 340px) {
     .portfolio__point {
         font-size: 18px;
         letter-spacing: -0.72px;

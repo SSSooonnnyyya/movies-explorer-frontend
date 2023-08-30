@@ -38,7 +38,7 @@
     padding: 0;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 330px) {
     .promo__background {
         min-width: 248px;
         min-height: 248px;

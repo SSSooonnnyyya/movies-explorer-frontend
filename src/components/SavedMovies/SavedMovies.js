@@ -5,11 +5,11 @@ import MoviesCardList from "../MoviesCardList/MoviesCardList";
 
 function SavedMovies(props) {
   return (
-    <section className="saved-movies">
+    <div className="saved-movies">
       <SearchForm />
       <MoviesCardList />
       <div className="saved-movies__space"></div>
-    </section>
+    </div>
   );
 }
 

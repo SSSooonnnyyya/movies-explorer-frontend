@@ -138,9 +138,14 @@
     flex-direction: column;
 }
 
-
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
     .menu__general {
-        margin-bottom: 300px;
+        margin-bottom: 595px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu__general {
+        margin-bottom: 410px;
     }
 }

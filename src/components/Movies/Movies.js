@@ -8,14 +8,14 @@ function Movies(props) {
   const [isLoading, setIsLoading] = React.useState(false);
 
   return (
-    <section className="movies">
+    <div className="movies">
       <SearchForm setIsLoading={setIsLoading}/>
       {isLoading ? 
       <Preloader /> : 
       <MoviesCardList />
       }
       <button type="button" className="movies__button">Ещё</button>
-    </section>
+    </div>
   );
 }
 

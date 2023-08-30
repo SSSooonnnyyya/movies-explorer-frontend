@@ -36,13 +36,13 @@
     min-height: 72px;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1160px) {
   .search-form__body{
-    min-width: 768px;
+    min-width: 800px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 830px) {
   .search-form__body{
     min-width: 708px;
   }
@@ -92,7 +92,7 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 730px) {
   .search-form__input {
       min-width: 200px;
   }
@@ -121,6 +121,13 @@
     position: relative;
     transition-duration: 300ms; /* анимация */
   }
+
+  .search-form__switch-btn:hover {
+    transition: opacity .3s ease;
+    opacity: .7;
+    cursor: pointer;
+}
+
   .search-form__switch-btn::after {
     content: "";
     height: 15px; /* высота кнопки */

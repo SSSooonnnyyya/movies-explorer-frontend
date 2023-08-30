@@ -18,7 +18,7 @@ function AboutMe(props) {
           </p>
           <a
             className="student__link"
-            href="https://github.com/"
+            href="https://github.com/SSSooonnnyyya"
             target="_blank"
           >
             Github

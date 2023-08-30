@@ -18,7 +18,7 @@ function MoviesCardList(props) {
 
   if (location.pathname === "/movies") {
     return (
-      <ul className="movie-list">
+      <section className="movie-list">
         {movies.map((movie, i) => (
           <Movie
             key={i}
@@ -28,11 +28,11 @@ function MoviesCardList(props) {
             isSaved={movie.isSaved}
           ></Movie>
         ))}
-      </ul>
+      </section>
     );
   } else if (location.pathname === "/saved-movies") {
     return (
-      <ul className="movie-list">
+      <section className="movie-list">
         {movies
           .filter((movie) => movie.isSaved)
           .map((movie, i) => (
@@ -46,7 +46,7 @@ function MoviesCardList(props) {
               updateMovies={updateMovies}
             ></Movie>
           ))}
-      </ul>
+      </section>
     );
   }
 }
