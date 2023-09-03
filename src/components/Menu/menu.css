@@ -1,0 +1,151 @@
+.menu {
+    flex-direction: column;
+    display: none;
+    align-items:flex-end;
+    justify-content: center;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s linear;
+    position: fixed;
+    overflow:hidden;
+    right: 0;
+    top: 0;
+    width:100%;
+    min-height:100%;
+    background-color: rgb(0, 0, 0, .3 );
+    z-index: 2;
+}
+
+@media screen and (max-width: 520px) {
+    .menu {
+        align-items:center;
+    }
+}
+
+.menu_opened {
+    display: flex;
+    opacity: 1;
+}
+
+.menu__container {
+    background-color: rgba(255, 255, 255, 1);
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    min-width: 520px;
+    position: fixed;
+}
+
+@media screen and (max-width: 520px) {
+    .menu__container {
+        min-width: 0;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.menu__closure {
+    background-image: url(../../images/colse_icon.svg);
+    min-width: 25px;
+    min-height: 25px;
+    align-self: flex-end;
+    margin: 28px 22.44px 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu__closure:hover {
+    transition: opacity .3s ease;
+    opacity: .6;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 520px) {
+    .menu__closure {
+        min-width: 30px;
+        min-height: 30px;
+        margin: 14px 14px 0 0;
+    }
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 105.44px;
+    height: 100%;
+}
+
+@media screen and (max-width: 520px) {
+    .menu__links {
+        margin-top: 99.44px;
+    }
+}
+
+.menu__link {
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 28px;
+    color: #000000;
+}
+
+.menu__link:hover {
+    transition: opacity .3s ease;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.menu__profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__profile:hover {
+    transition: opacity .3s ease;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.menu__profile-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14p;
+    color: #000000;
+    margin-right: 13px;
+}
+
+.menu__link_type_underlined {
+    text-decoration: underline;
+}
+
+.menu__logo {
+    background-image: url(../../images/profile_icon.svg);
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu__general {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+    .menu__general {
+        margin-bottom: 595px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu__general {
+        margin-bottom: 410px;
+    }
+}
