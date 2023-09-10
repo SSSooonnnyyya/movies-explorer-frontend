@@ -3,6 +3,7 @@ import "./profile.css";
 import { Link } from "react-router-dom";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import { api } from "../../utils/MainApi";
+import {showValidationError} from "../../utils/utils"
 
 function Profile(props) {
   const [buttonIsActive, setButtonIsActive] = useState(false);
@@ -61,6 +62,7 @@ function Profile(props) {
     if (e.target.checkValidity()&&((e.target.value !== currentUser.name)||(userEmail !== currentUser.email))) {
       setIsDisabled(false);
     } else {
+      showValidationError(e);
       setIsDisabled(true);
     }
   };
@@ -71,6 +73,7 @@ function Profile(props) {
       if (e.target.checkValidity()&&((e.target.value !== currentUser.email)||(userName !== currentUser.name))) {
         setIsDisabled(false);
       } else {
+        showValidationError(e);
         setIsDisabled(true);
       }
     };
@@ -112,7 +115,7 @@ function Profile(props) {
         </button>
       )}
       {editIsActive && (
-        <Link to="/signin" className="profile__link" onClick={props.handleLogOut}>
+        <Link to="/" className="profile__link" onClick={props.handleLogOut}>
           Выйти из аккаунта
         </Link>
       )}

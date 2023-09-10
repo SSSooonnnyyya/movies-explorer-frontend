@@ -53,9 +53,9 @@ function MoviesCardList(props) {
     return (
       <section className="movie-section">
         <div className="movie-section__list">
-          {props.movies?.slice(0, movieLength).map((movie, i) => (
+          {props.movies?.slice(0, movieLength).map((movie) => (
             <MoviesCard
-              key={i}
+              key={movie.id}
               link={movie.link}
               name={movie.name}
               duration={movie.duration}
@@ -81,15 +81,16 @@ function MoviesCardList(props) {
     return (
       <section className="movie-section">
         <div className="movie-section__list">
-          {props.savedMovies?.map((movie, i) => (
+          {props.savedMovies?.map((movie) => (
               <SavedMovieCard
-                key={i}
+                key={movie.movieId}
                 movieId={movie.movieId}
                 link={movie.image}
                 name={movie.nameRU}
                 duration={movie.duration}
                 isSaved={movie.isSaved}
                 setSavedMovies={props.setSavedMovies}
+                setFilteredSavedMovies={props.setFilteredSavedMovies}
                 movie={movie}
                 trailerLink={movie.trailerLink}
               ></SavedMovieCard>

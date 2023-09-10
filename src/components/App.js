@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 
 function App() {
   const [currentUser, setCurrentUser] = React.useState({});
-  const [loggedIn, setIsLoggedIn] = React.useState(false);
+  const [loggedIn, setIsLoggedIn] = React.useState(localStorage.getItem("jwt")?true:false);
   const navigate = useNavigate();
 
   function handleLogOut() {

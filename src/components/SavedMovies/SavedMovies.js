@@ -49,7 +49,8 @@ function SavedMovies(props) {
         savedMovies={filteredSavedMovies}
         showNotification={showNotification}
         showError={showError}
-        setSavedMovies={setFilteredSavedMovies}
+        setSavedMovies={setSavedMovies}
+        setFilteredSavedMovies={setFilteredSavedMovies}
       />
       <div className="saved-movies__space"></div>
     </div>

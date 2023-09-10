@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Form from "../Form/Form";
 import { api } from "../../utils/MainApi";
+import {showValidationError} from "../../utils/utils"
 
 function Register(props) {
   const handleSubmit = (e) => {
@@ -26,7 +26,6 @@ function Register(props) {
     email: "",
     password: "",
   });
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,6 +36,7 @@ function Register(props) {
     if (e.target.form.checkValidity()) {
       setIsDisabled(false);
     } else {
+      showValidationError(e);
       setIsDisabled(true);
     }
   };
@@ -82,6 +82,7 @@ function Register(props) {
       <input
         required
         className="form__input"
+        type="password"
         id="password"
         name="password"
         minLength="5"

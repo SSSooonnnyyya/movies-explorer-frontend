@@ -6,6 +6,8 @@ import { api } from "../../utils/MainApi";
 function MoviesCard(props) {
   const location = useLocation();
   const [movieIsSaved, setMovieIsSaved] = React.useState(props.isSaved);
+  const hours = Math.floor(props.duration/60);
+  const minutes = props.duration - hours*60;
 
   function onSaveClick() {
     api
@@ -64,7 +66,7 @@ function MoviesCard(props) {
         />
         <div className="movie__container">
           <h2 className="movie__title">{props.name}</h2>
-          <p className="movie__duration">{props.duration}</p>
+          <p className="movie__duration">{`${hours}ч ${minutes}м`}</p>
         </div>
         {movieIsSaved ? (
           <div className="movie__save-icon" onClick={onDeleteClick}></div>

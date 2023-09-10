@@ -9,6 +9,7 @@ function SavedMovieCard(props) {
       .deleteMovie(props.movie._id)
       .then(() => {
         props.setSavedMovies((state) => state.filter((m) => m._id !== props.movie._id));
+        props.setFilteredSavedMovies((state) => state.filter((m) => m._id !== props.movie._id));
       })
       .catch((res) => {
         console.log(res.message);

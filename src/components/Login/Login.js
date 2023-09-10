@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Form from "../Form/Form";
 import { api } from "../../utils/MainApi";
+import {showValidationError} from "../../utils/utils"
 
 function Login(props) {
   const [formValue, setFormValue] = useState({
@@ -32,6 +33,7 @@ function Login(props) {
     if (e.target.form.checkValidity()) {
       setIsDisabled(false);
     } else {
+      showValidationError(e);
       setIsDisabled(true);
     }
   };
@@ -64,6 +66,7 @@ function Login(props) {
       <input
         required
         className="form__input"
+        type="password"
         id="password"
         name="password"
         minLength="5"
