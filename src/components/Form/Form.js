@@ -14,11 +14,12 @@ function Form(props) {
       <h1 className="form__greeting">{props.title}</h1>
       <form onSubmit={handleFormSubmit} className="form__body">
         {props.children}
-
+        {props.error && <span className="form__submit-error">{props.error}</span>}
         <button
           type="submit"
           className={`form__submit-botton form__submit-botton_type_${props.name}`}
           onClick={props.onSubmit}
+          disabled={props.isDisabled}
         >
           {props.buttonName}
         </button>

@@ -1,4 +1,4 @@
-.movie-list {
+.movie-section__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 60px;
@@ -8,14 +8,14 @@
 }
 
 @media screen and (max-width: 1160px) {
-    .movie-list {
+    .movie-section__list {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 47px;
     }
 }
 
   @media screen and (max-width: 730px) {
-    .movie-list  {
+    .movie-section__list  {
         grid-template-columns: 339px;
         row-gap: 39px;
         column-gap: 0px;
@@ -23,9 +23,56 @@
 }
 
 @media screen and (max-width: 360px) {
-    .movie-list  {
+    .movie-section__list  {
         grid-template-columns: 300px;
         row-gap: 39px;
         column-gap: 0px;
     }
 }
+
+.movie__notification {
+    text-align: center;
+    font-size: 14px;
+    color: rgb(255, 51, 0);
+    margin: 0 10px 0 10px;
+}
+
+.movie-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.movie-section__button {
+    border-radius: 6px;
+    background: #F9F9F9;
+    width: 320px;
+    height: 36px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    margin: 79px 0 160px 0;
+    border: none;
+    padding: 0;
+  }
+  
+  .movie-section__button:hover {
+    transition: opacity .3s ease;
+    opacity: .6;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .movie-section__button {
+      margin: 65px 0 159px 0;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .movie-section__button {
+      width: 240px;
+      margin: 63px 0 159px 0;
+    }
+  }

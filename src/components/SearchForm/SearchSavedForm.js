@@ -1,56 +1,43 @@
 import React, { useState } from "react";
 import "./search-form.css";
 
-function SearchForm(props) {
-  const [shortMovieActive, setShortMovieActive] = useState(
-    localStorage.getItem("switch-status") === "true"
-  );
+function SearchSavedForm(props) {
+  const [shortSavedMovieActive, setSavedShortMovieActive] = useState(false);
   const [showBlankError, setShowBlankError] = useState(false);
-  const [searchRequest, setSearchRequest] = useState(
-    localStorage.getItem("search-value") || ""
-  );
+  const [savedSearchRequest, setSavedSearchRequest] = useState("");
 
-  React.useEffect(() => {
-    props.loadMovies(searchRequest, shortMovieActive);
-  }, []);
-
-  function onSwitchClick() {
-    props.loadMovies(searchRequest, !shortMovieActive);
-    localStorage.setItem("switch-status", !shortMovieActive);
-    setShortMovieActive((prev) => {
+  function onSwitchSaved() {
+    props.loadSavedMovies(savedSearchRequest, !shortSavedMovieActive);
+    setSavedShortMovieActive((prev) => {
       return !prev;
     });
   }
 
-  function Search(event) {
+  function SearchSaved(event) {
     event.preventDefault();
     setShowBlankError(false);
-    if (!searchRequest) {
+    if (!savedSearchRequest) {
       setShowBlankError(true);
     } else {
-      localStorage.setItem("search-value", searchRequest);
-      localStorage.setItem("switch-status", shortMovieActive);
-      return props.loadMovies(searchRequest, shortMovieActive);
-
-      // props.setIsLoading((prev) => !prev);
+      return props.loadSavedMovies(savedSearchRequest, shortSavedMovieActive);
     }
   }
 
   const handleMovieChange = (e) => {
     const value = e.target.value;
-    setSearchRequest(value);
+    setSavedSearchRequest(value);
   };
 
   return (
     <section className="search-form">
-      <form className="search-form__body" onSubmit={Search}>
+      <form className="search-form__body" onSubmit={SearchSaved}>
         <div className="search-form__container">
           <div className="search-form__box">
             <input
               className="search-form__input"
               placeholder="Фильм"
               onChange={handleMovieChange}
-              value={searchRequest}
+              value={savedSearchRequest}
             />
             {showBlankError && (
               <span className="search-form__error">
@@ -64,9 +51,11 @@ function SearchForm(props) {
         </div>
         <div className="search-form__filter">
           <div
-            onClick={onSwitchClick}
+            onClick={onSwitchSaved}
             className={`search-form__switch-btn ${
-              shortMovieActive ? "search-form__switch-btn_state_active" : ""
+              shortSavedMovieActive
+                ? "search-form__switch-btn_state_active"
+                : ""
             }`}
           ></div>
           <p className="search-form__sign">Короткометражки</p>
@@ -76,4 +65,4 @@ function SearchForm(props) {
   );
 }
 
-export default SearchForm;
+export default SearchSavedForm;
