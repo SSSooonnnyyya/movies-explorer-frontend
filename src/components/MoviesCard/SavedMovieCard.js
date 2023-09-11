@@ -4,6 +4,9 @@ import { api } from "../../utils/MainApi";
 
 function SavedMovieCard(props) {
 
+  const hours = Math.floor(props.duration/60);
+  const minutes = props.duration - hours*60;
+
   function onMovieDelete() {
     api
       .deleteMovie(props.movie._id)
@@ -29,7 +32,7 @@ function SavedMovieCard(props) {
         />
         <div className="movie__container">
           <h2 className="movie__title">{props.name}</h2>
-          <p className="movie__duration">{props.duration}</p>
+          <p className="movie__duration">{`${hours}ч ${minutes}м`}</p>
         </div>
 
           <button
