@@ -162,6 +162,11 @@
     }
 }
 
+.form__submit-botton:disabled {
+    background-color: #c9c4c4;
+    color: rgb(132, 130, 130);
+}
+
 .form__submit-botton_type_register {
     margin: 69px 0 16px 0;
 }
@@ -182,7 +187,7 @@
     }
 }
 
-.form__submit-botton:hover {
+.form__submit-botton:enabled:hover {
     transition: opacity .3s ease;
     opacity: .8;
     cursor: pointer;
@@ -198,4 +203,15 @@
         min-height: 12px;
         line-height: normal;
         visibility: hidden;
+}
+
+.form__submit-error {
+    font-weight: 400;
+    font-size: 10px;
+    color: #FF0000;
+    margin: 0;
+    overflow-wrap: initial;
+    display: block;
+    min-height: 12px;
+    line-height: normal;
 }

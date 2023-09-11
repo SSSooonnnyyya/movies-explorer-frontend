@@ -148,9 +148,10 @@
     outline: 1px solid rgb(81, 202, 206);
 }
 
-.profile__save-button {
+.profile__save-button:enabled {
     width: 400px;
     height: 45px;
+    border-radius: 10px;
     background-color: rgba(52, 86, 243, 1);
     border: none;
     color: rgba(255, 255, 255, 1);
@@ -159,7 +160,19 @@
     line-height: normal;
 }
 
-.profile__save-button:hover {
+.profile__save-button:disabled {
+    width: 400px;
+    height: 45px;
+    background-color: #c9c4c4;
+    color: rgb(132, 130, 130);
+    font-size: 14px;
+    font-weight: 500px;
+    line-height: normal;
+    border-radius: 10px;
+    border: none;
+}
+
+.profile__save-button:enabled:hover {
     transition: opacity .3s ease;
     opacity: .6;
     cursor: pointer;
@@ -175,6 +188,17 @@
 
 .profile__input-error {
     color: #FF004C;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+    align-self: center;
+    height: 14px;
+    margin-bottom: 20px;
+}
+
+.profile__confirmation {
+    color: rgb(9, 175, 9);
     text-align: center;
     font-size: 11px;
     font-weight: 400;

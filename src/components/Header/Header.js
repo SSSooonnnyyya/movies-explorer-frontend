@@ -11,7 +11,7 @@ function Header(props) {
     setMenuIsOpened(true);
   }
 
-  if (location.pathname === "/") {
+  if ((location.pathname === "/")&&(!props.loggedInStatus)) {
     return (
       <header className="header">
         <Link to="/" className="header__logo"></Link>
@@ -33,7 +33,7 @@ function Header(props) {
   } else if (
     location.pathname === "/profile" ||
     location.pathname === "/movies" ||
-    location.pathname === "/saved-movies"
+    location.pathname === "/saved-movies" || ((location.pathname === "/")&&(props.loggedInStatus))
   ) {
     return (
       <header className="header header_type_profile">
